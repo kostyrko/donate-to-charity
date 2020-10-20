@@ -1,4 +1,4 @@
-
+const { writeFileSync, existsSync, readFileSync } = require('fs');
 const path = 'node_modules/react-scripts/config/webpack.config.js';
 
 const find = /(sourceMap: isEnvProduction && shouldUseSourceMap)/g;
