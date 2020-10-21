@@ -5,74 +5,57 @@ import { NavLink } from "react-router-dom";
 const NavMain = () => {
   return (
     <nav className="nav-main">
-      <NavLink exact to='/'>
-        <Link
-          className="nav-link"
-          activeClass="active"
-          to="home-header"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          Start
-        </Link>
-      </NavLink>
-      <NavLink exact to='/'>
-        <Link
-          className="nav-link"
-          activeClass="active"
-          to="about-project"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          O co chodzi?
-        </Link>
+      <NavLink className="nav-link" exact to="/">
+        Start
       </NavLink>
 
-      <NavLink exact to='/'>
-        <Link
-          className="nav-link"
-          activeClass="active"
-          to="about-us"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          O nas
-        </Link>
-      </NavLink>
+      <Link
+        className="nav-link"
+        activeClass="active"
+        to="about-project"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={500}
+      >
+        O co chodzi?
+      </Link>
 
-      <NavLink exact to='/'>
-        <Link
-          className="nav-link"
-          activeClass="active"
-          to="organizations"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          Fundacje i organizacje
-        </Link>
-      </NavLink>
+      <Link
+        className="nav-link"
+        activeClass="active"
+        to="about-us"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={500}
+      >
+        O nas
+      </Link>
 
-      <NavLink exact to='/'>
-        <Link
-          className="nav-link"
-          activeClass="active"
-          to="contact"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          Kontakt
-        </Link>
-      </NavLink>
+      <Link
+        className="nav-link"
+        activeClass="active"
+        to="organizations"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={500}
+      >
+        Fundacje i organizacje
+      </Link>
+
+      <Link
+        className="nav-link"
+        activeClass="active"
+        to="contact"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={500}
+      >
+        Kontakt
+      </Link>
     </nav>
   );
 };
