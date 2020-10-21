@@ -17,7 +17,7 @@ function App() {
         <Route exact path='/oddaj-rzeczy' component={CharityForm}/>
         <Route exact path='/logowanie' component={Login}/>
         <Route exact path='/rejestracja' component={Registration}/>
-        <Route exact path='/logowanie' component={Logout}/>
+        <Route exact path='/wylogowano' component={Logout}/>
         <Route exact path='' component={NotFound}/>
       </Switch>
     </BrowserRouter>
