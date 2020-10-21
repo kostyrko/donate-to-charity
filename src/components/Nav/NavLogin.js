@@ -3,15 +3,9 @@ import { NavLink } from "react-router-dom";
 
 const NavLogin = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <NavLink exact to='/logowanie'>Zaloguj</NavLink>
-        </li>
-        <li>
-          <NavLink exact to='/rejestracja'>Załóż konto</NavLink>
-        </li>
-      </ul>
+    <nav className="nav-login">
+      <NavLink exact to='/logowanie'>Zaloguj</NavLink>
+      <NavLink className="nav-register" exact to='/rejestracja'>Załóż konto</NavLink>
     </nav>
   );
 }

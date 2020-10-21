@@ -14,12 +14,8 @@ const HomeHeader = (props) => {
           </div>
           <div className="intro__decoration"></div>
           <div className="header__links">
-            <button className="header_btn">
-              <NavLink exact to='/logowanie'>Oddaj rzeczy</NavLink>
-            </button>
-            <button className="header_btn">
-              <NavLink exact to='/logowanie'>Zorganizuj zbiórkę</NavLink>
-            </button>
+              <NavLink className="header__link" exact to='/logowanie'>Oddaj rzeczy</NavLink>
+              <NavLink className="header__link" exact to='/logowanie'>Zorganizuj zbiórkę</NavLink>
           </div>
         </div>
       </div>
