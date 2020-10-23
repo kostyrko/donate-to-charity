@@ -35,10 +35,11 @@ const HomeOrganizations = () => {
   const handleClick = (e) => {
     // console.log(typeof(e.target.name));
     setOption(e.target.name);
+    // setCurrentPage(0)
   };
 
   return (
-    <section id="organizations">
+    <section id="organizations" className="organizations">
       <div className="container">
         <h4>Komu pomagam?</h4>
         <div className="decoration"></div>
@@ -76,11 +77,11 @@ const HomeOrganizations = () => {
           veniam explicabo? Impedit officiis dolore officia nam.
         </div>
 
-        <ul>{currentPageData}</ul>
+        <ul className="org-list">{currentPageData}</ul>
         <ReactPaginate
-          previousLabel={"← Następna"}
-          nextLabel={"Poprzednia →"}
-          pageCount={pageCount}
+          previousLabel={null}
+          nextLabel={null}
+          pageCount={pageCount>1 ? pageCount : null}
           onPageChange={handlePageClick}
           containerClassName={"pagination"}
           previousLinkClassName={"pagination__link"}

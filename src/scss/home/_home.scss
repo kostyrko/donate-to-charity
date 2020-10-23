@@ -2,10 +2,11 @@
 @import "about_project";
 @import "about_us";
 @import "home_contact";
+@import "home_organizations";
 
 section {
   min-height: 100vh;
-  border: 1px solid green;
+  // border: 1px solid green;
   @include flex-center;
 }
 .container {
