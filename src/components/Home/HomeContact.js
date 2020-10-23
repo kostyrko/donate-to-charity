@@ -1,9 +1,16 @@
 import React from 'react';
 
-const HomeContact = () => {
+const HomeContact = (props) => {
+  let {footer, contactForm} = props;
   return (
-    <section id="contact">
-      Kontakt
+    <section id="contact" className="home-contact">
+      <div className="container">
+        <div className="image"></div>
+        <div className="form-container">
+          {contactForm}
+        </div>
+      </div>
+      {footer}
     </section>
   );
 }
