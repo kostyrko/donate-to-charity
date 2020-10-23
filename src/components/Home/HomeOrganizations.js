@@ -1,8 +1,36 @@
 import React, { useState } from "react";
+import ReactPaginate from "react-paginate";
+
 import { organizations } from "./orgData";
 
 const HomeOrganizations = () => {
   const [option, setOption] = useState("foundation");
+
+  const [currentPage, setCurrentPage] = useState(0);
+
+  function handlePageClick({ selected: selectedPage }) {
+    setCurrentPage(selectedPage);
+  }
+  const PER_PAGE = 3;
+  const offset = currentPage * PER_PAGE;
+  const pageCount = Math.ceil(
+    Object.keys(organizations[option]).length / PER_PAGE
+  );
+
+  const currentPageData = Object.keys(organizations[option])
+    .slice(offset, offset + PER_PAGE)
+    .map((elem) => {
+      const { name, additionalInfo, desc } = organizations[option][elem];
+      return (
+        <li key={elem}>
+          <div className="header">
+            <h5>{name}</h5>
+            <p className="info">{additionalInfo}</p>
+          </div>
+          <p className="org-desc">{desc}</p>
+        </li>
+      );
+    });
 
   const handleClick = (e) => {
     // console.log(typeof(e.target.name));
@@ -48,20 +76,19 @@ const HomeOrganizations = () => {
           veniam explicabo? Impedit officiis dolore officia nam.
         </div>
 
-        <ul>
-          {Object.keys(organizations[option]).map((elem) => {
-            const { name, additionalInfo, desc } = organizations[option][elem];
-            return (
-              <li key={elem}>
-                <div className="header">
-                  <h5>{name}</h5>
-                  <p className="info">{additionalInfo}</p>
-                </div>
-                <p className="org-desc">{desc}</p>
-              </li>
-            );
-          })}
-        </ul>
+        <ul>{currentPageData}</ul>
+        <ReactPaginate
+          previousLabel={"← Następna"}
+          nextLabel={"Poprzednia →"}
+          pageCount={pageCount}
+          onPageChange={handlePageClick}
+          containerClassName={"pagination"}
+          previousLinkClassName={"pagination__link"}
+          nextLinkClassName={"pagination__link"}
+          disabledClassName={"pagination__link--disabled"}
+          activeClassName={"pagination__link--active"}
+        />
+
       </div>
     </section>
   );
