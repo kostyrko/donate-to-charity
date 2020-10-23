@@ -7,7 +7,7 @@ const ContactForm = () => {
       <div className="decoration"></div>
       <div className="basic-info">
         <div className="name">
-          <label label htmlFor="name">Wpisz swoje imię</label>
+          <label htmlFor="name">Wpisz swoje imię</label>
           <input type="text" name="" id="" placeholder="Mikolaj"/>
         </div>
         <div className="email">
