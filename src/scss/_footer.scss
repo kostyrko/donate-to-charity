@@ -1,0 +1,40 @@
+.footer {
+  height: 30px;
+  .container {
+    // display: flex;
+    position: relative;
+    .copyright {
+      // @include flex-center;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      color: $gray-dark;
+      font-size: 0.75rem;
+    }
+    .social {
+        position: absolute;
+        right: 0;
+        bottom: 8px;
+        width: 60px;
+        display: flex;
+        .icon{
+          width: 15px;
+          height: 15px;
+          // border: 1px solid red;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        
+        .facebook .icon {
+          background-image: url('../assets/Facebook.svg');
+        }
+        .instagram .icon {
+          background-image: url('../assets/Instagram.svg');
+        }
+        .instagram {
+          margin-left: 10px;
+        }
+    }
+  }
+}
