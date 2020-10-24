@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
-import { FirebaseContext } from './Firebase';
+import { Link, withRouter } from "react-router-dom";
+import { compose } from 'recompose';
+// import { FirebaseContext } from './Firebase';
+import { withFirebase } from '../components/Firebase';
 import * as ROUTES from "../constants/routers";
 
 const INITIAL_STATE = {
@@ -12,7 +13,8 @@ const INITIAL_STATE = {
   error: null,
 };
 
-const SignUpForm = ({firebase}) => {
+
+const SignUpFormBase = ({firebase,history}) => {
   const [content, setContent] = useState({ ...INITIAL_STATE });
 
   const onSubmit = (e) => {
@@ -22,6 +24,7 @@ const SignUpForm = ({firebase}) => {
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
         setContent({ ...INITIAL_STATE });
+        history.push(ROUTES.LANDING)
       })
       .catch(error => {
         setContent({ error });
@@ -86,13 +89,18 @@ const SignUpForm = ({firebase}) => {
   );
 };
 
+const SignUpForm = compose(
+  withRouter,
+  withFirebase
+)(SignUpFormBase);
+
 const SignUp = () => (
   <div>
     <h1>SignUp</h1>
-    <FirebaseContext.Consumer>
-      {firebase => <SignUpForm firebase={firebase} />}
-    </FirebaseContext.Consumer>
+    <SignUpForm/>
   </div>
 );
 
 export default SignUp;
+
+export { SignUpForm };
