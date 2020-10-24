@@ -11,12 +11,14 @@ const HomeOrganizations = () => {
   function handlePageClick({ selected: selectedPage }) {
     setCurrentPage(selectedPage);
   }
+
   const PER_PAGE = 3;
   const offset = currentPage * PER_PAGE;
   const pageCount = Math.ceil(
     Object.keys(organizations[option]).length / PER_PAGE
   );
-
+  
+  // const [currentPageData, setCurrentPageData] = useState()
   const currentPageData = Object.keys(organizations[option])
     .slice(offset, offset + PER_PAGE)
     .map((elem) => {
@@ -35,7 +37,7 @@ const HomeOrganizations = () => {
   const handleClick = (e) => {
     // console.log(typeof(e.target.name));
     setOption(e.target.name);
-    // setCurrentPage(0)
+    setCurrentPage(0)
   };
 
   return (
@@ -46,7 +48,7 @@ const HomeOrganizations = () => {
 
         <div className="org-options">
           <button
-            className="org"
+            // className="org"
             name="foundation"
             onClick={(e) => handleClick(e)}
             className={option === "foundation" ? "active" : "non-active"}
@@ -54,7 +56,7 @@ const HomeOrganizations = () => {
             Fundacjom
           </button>
           <button
-            className="org"
+            // className="org"
             name="ngo"
             onClick={(e) => handleClick(e)}
             className={option === "ngo" ? "active" : "non-active"}
@@ -62,7 +64,7 @@ const HomeOrganizations = () => {
             Organizacjom pozarządowym
           </button>
           <button
-            className="org"
+            // className="org"
             name="local"
             onClick={(e) => handleClick(e)}
             className={option === "local" ? "active" : "non-active"}
@@ -82,6 +84,7 @@ const HomeOrganizations = () => {
           previousLabel={null}
           nextLabel={null}
           pageCount={pageCount>1 ? pageCount : null}
+          forcePage={currentPage}
           onPageChange={handlePageClick}
           containerClassName={"pagination"}
           previousLinkClassName={"pagination__link"}
@@ -96,3 +99,8 @@ const HomeOrganizations = () => {
 };
 
 export default HomeOrganizations;
+
+
+// https://ihsavru.medium.com/react-paginate-implementing-pagination-in-react-f199625a5c8e
+
+// https://github.com/AdeleD/react-paginate/blob/master/demo/js/demo.js

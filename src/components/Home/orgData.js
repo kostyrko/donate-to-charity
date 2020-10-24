@@ -29,7 +29,12 @@ export const organizations = {
       name: 'Fundacja-6',
       additionalInfo: 'ubrania, jedzenie, meble zabawki',
       desc: 'Cel i Misja:-6'
-    }
+    },
+    7 : {
+      name: 'Fundacja-7',
+      additionalInfo: 'ubrania, jedzenie, meble zabawki',
+      desc: 'Cel i Misja:-7'
+    },
   },
   ngo : {
     1 : {
