@@ -77,8 +77,10 @@
     li {
       cursor: pointer;
     }
+    li, a {
+      padding: 10px 5px;
+    }
     li~ li {
-      padding: 5px 10px;
       margin-left: 10px;
     }
   }
