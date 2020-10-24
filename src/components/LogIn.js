@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-const Login = () => {
-  return (
+// import { FirebaseContext } from '../components/Firebase';
+import * as ROUTES from "../constants/routers";
+
+
+const LogIn = () => (
+  <div>
+    <h1>SignUp</h1>
     <div>
-      <h3>Login</h3>
+        Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
     </div>
-  );
-}
+  </div>
+);
 
-export default Login;
+export default LogIn;
