@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import HomeHeader from "./HomeHeader";
 import NavLogin from "../Nav/NavLogin";
 import NavMain from "../Nav/NavMain";
@@ -9,13 +9,17 @@ import HomeOrganizations from "./HomeOrganizations";
 import HomeContact from "./HomeContact";
 import ContactForm from "../ContactForm";
 import Footer from "../Footer";
+import UserContext from "../context";
 
 const Home = () => {
+  // const loggedUser = useContext(userContext);
   return (
     <>
       <HomeHeader>
         <nav className="home__nav">
-          <NavLogin />
+          <UserContext.Consumer>
+            {(value) => <NavLogin user={value} />}
+          </UserContext.Consumer>
           <NavMain />
         </nav>
       </HomeHeader>

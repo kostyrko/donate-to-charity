@@ -33,7 +33,7 @@ const SignUpFormBase = ({firebase,history}) => {
     e.preventDefault();
   };
 
-  console.log('content',content);
+  console.log('signUp-> content',content);
 
   const onChange = (e) => {
     setContent({ ...content, [e.target.name]: e.target.value });

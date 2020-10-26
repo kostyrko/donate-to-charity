@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../constants/routers";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
 import { withFirebase } from "../components/Firebase";
-
-
+import UserContext from "./context";
 
 const INITIAL_STATE = {
   email: "",
@@ -14,11 +13,16 @@ const INITIAL_STATE = {
 };
 
 const LogInFormBase = (props) => {
+  const { set } = useContext(UserContext);
   const [content, setContent] = useState({ ...INITIAL_STATE });
+
+  // set({ email: content.email });
+
+  // const [user, setUser] = useState({ user: { email: "" } });
 
   const onSubmit = (event) => {
     const { email, password } = content;
-
+    set({ email: email })
     props.firebase
       .doSignInWithEmailAndPassword(email, password)
       .then(() => {
@@ -31,6 +35,8 @@ const LogInFormBase = (props) => {
 
     event.preventDefault();
   };
+
+  // console.log('lognIn-> content',content);
 
   const onChange = (event) => {
     setContent({ ...content, [event.target.name]: event.target.value });
