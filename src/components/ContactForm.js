@@ -64,14 +64,14 @@ const ContactForm = () => {
   
   const validate = () => {
     const errorsArr = [];
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
     if (!name || name.length < 2 || name.indexOf(" ") >= 0) {
       errorsArr.push("Imię powinno posiadać przynajmniej 2 znaki");
     }
     if (
       !email ||
-      email.length < 3 ||
-      email.indexOf("@") === -1 ||
-      email.indexOf(".") === -1
+      !re.test(email)
     ) {
       errorsArr.push("Email powinien być poprawny");
     }
