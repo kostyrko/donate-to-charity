@@ -19,7 +19,7 @@ const Home = () => {
       <HomeHeader>
         <nav className="home__nav">
           <UserContext.Consumer>
-            {(value) => value.email.length ? <NavLogged user={value}/> : <NavLogin/> }
+            {(value) => value.email.length ? <NavLogged/> : <NavLogin/> }
           </UserContext.Consumer>
           <NavMain />
         </nav>
