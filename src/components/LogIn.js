@@ -16,10 +16,6 @@ const LogInFormBase = (props) => {
   const { set } = useContext(UserContext);
   const [content, setContent] = useState({ ...INITIAL_STATE });
 
-  // set({ email: content.email });
-
-  // const [user, setUser] = useState({ user: { email: "" } });
-
   const onSubmit = (event) => {
     const { email, password } = content;
     set({ email: email })

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import HomeHeader from "./HomeHeader";
 import NavLogin from "../Nav/NavLogin";
+import NavLogged from "../Nav/NavLogged";
 import NavMain from "../Nav/NavMain";
 import AboutProject from "./AboutProject";
 import HomeThreeColumns from "./HomeThreeColumns";
@@ -18,7 +19,7 @@ const Home = () => {
       <HomeHeader>
         <nav className="home__nav">
           <UserContext.Consumer>
-            {(value) => <NavLogin user={value} />}
+            {(value) => value.email.length ? <NavLogged user={value}/> : <NavLogin/> }
           </UserContext.Consumer>
           <NavMain />
         </nav>
