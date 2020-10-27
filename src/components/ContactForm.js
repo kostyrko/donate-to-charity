@@ -25,7 +25,7 @@ const ContactForm = () => {
   };
 
   const handleSubmit = (event) => {
-    console.log('clicked - 1');
+    console.log("clicked - 1");
     event.preventDefault();
     if (validate()) {
       // setIsSubmitted(true);
@@ -38,30 +38,30 @@ const ContactForm = () => {
       })
         .then((response) => {
           if (response.ok) {
-            console.log('response', response);
+            // console.log("response", response);
             return response.json();
           } else {
             throw new Error("Something went wrong");
           }
         })
         .then((data) => {
-          console.log("data", data);
+          // console.log("data", data);
           setIsSubmitted(true);
           setError(null);
         })
         .catch((error) => {
           setError(error.message);
         });
-        
+
       setTimeout(function () {
         setIsSubmitted(false);
       }, 2000);
     } else {
-      console.log('not valid');
+      // console.log("not valid");
       setIsSubmitted(false);
     }
   };
-  
+
   const validate = () => {
     const errorsArr = [];
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -69,10 +69,7 @@ const ContactForm = () => {
     if (!name || name.length < 2 || name.indexOf(" ") >= 0) {
       errorsArr.push("Imię powinno posiadać przynajmniej 2 znaki");
     }
-    if (
-      !email ||
-      !re.test(email)
-    ) {
+    if (!email || !re.test(email)) {
       errorsArr.push("Email powinien być poprawny");
     }
     if (message.length < 50) {
@@ -81,8 +78,7 @@ const ContactForm = () => {
     if (errorsArr.length !== 0) {
       setErrorsArr(() => errorsArr);
       return false;
-    } 
-    else {
+    } else {
       setErrorsArr(null);
       return true;
     }
@@ -149,4 +145,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
