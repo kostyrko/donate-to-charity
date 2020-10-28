@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import HomeHeader from "./HomeHeader";
 import NavLogin from "../Nav/NavLogin";
 import NavLogged from "../Nav/NavLogged";
@@ -11,20 +11,27 @@ import HomeContact from "./HomeContact";
 import ContactForm from "../ContactForm";
 import Footer from "../Footer";
 import UserContext from "../context";
+import * as ROUTES from "../../constants/routers";
 
 const Home = () => {
-  // const loggedUser = useContext(userContext);
+  const [link, setLink] = useState(ROUTES.LOG_IN)
+  const { email } = useContext(UserContext);
+
+  useEffect(() => {
+    if (email) {
+      setLink(ROUTES.DONATE)
+    }
+  }, [email]);
+
   return (
     <>
-      <HomeHeader>
+      <HomeHeader link={link}>
         <nav className="home__nav">
-          <UserContext.Consumer>
-            {(value) => value.email.length ? <NavLogged/> : <NavLogin/> }
-          </UserContext.Consumer>
+          {email.length ? <NavLogged /> : <NavLogin />}
           <NavMain />
         </nav>
       </HomeHeader>
-      <AboutProject>
+      <AboutProject link={link}>
         <HomeThreeColumns />
       </AboutProject>
       <AboutUs />

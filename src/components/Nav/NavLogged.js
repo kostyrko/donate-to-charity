@@ -1,17 +1,15 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import UserContext from "../context";
-
+import FirebaseContext from "../Firebase/context";
 
 const NavLogged = () => {
-  const { email,set } = useContext(UserContext);
-  console.log(useContext(UserContext));
+  const { email } = useContext(UserContext);
+  const firebase = useContext(FirebaseContext);
+
   const handleClick = () => {
-    console.log("NavLogin-> email",email)
-    set({ email: "" });
+    firebase.doSignOut();
   };
-  console.log("NavLogin-> user", email);
-  // console.log("NavLogin-> loggedUser", loggedUser);
 
   return (
     <nav className="nav__donate">
