@@ -1,0 +1,40 @@
+@import "./navLogged";
+
+.nav--centered {
+  // width: 100%;
+  height: 10vh;
+  @include flex-center;
+  .container {
+    width:100%;
+    max-width: 1200px;
+  }
+}
+
+.nav-login {
+  margin-top: 40px;
+  a:last-of-type {
+    border: 1px solid $yellow;
+  }
+}
+.nav-main {
+  .active {
+    border: 1px solid $gray-regular;
+  }
+}
+.nav-login,
+.nav-main {
+  display: flex;
+  justify-content: flex-end;
+  height: 50%;
+  a {
+    padding: 5px 10px;
+    @include flex-center;
+  }
+  a ~ a {
+    margin-left: 25px;
+  }
+  a:hover {
+    color: $gray-regular;
+    cursor: pointer;
+  }
+}

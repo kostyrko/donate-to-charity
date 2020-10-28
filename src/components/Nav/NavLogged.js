@@ -18,7 +18,6 @@ const NavLogged = () => {
         Oddaj rzeczy
       </NavLink>
       <NavLink
-        className="nav__log-out"
         exact
         to="/wylogowano"
         onClick={handleClick}

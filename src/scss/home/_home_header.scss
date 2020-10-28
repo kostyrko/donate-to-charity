@@ -30,33 +30,6 @@
 
       margin-right: 5vw;
     }
-    .nav-login {
-      a:last-of-type {
-        border: 1px solid $yellow;
-      }
-    }
-    .nav-main {
-      .active {
-        border: 1px solid $gray-regular;
-      }
-    }
-    .nav-login,
-    .nav-main {
-      display: flex;
-      justify-content: flex-end;
-      height: 50%;
-      a {
-        padding: 5px 10px;
-        @include flex-center;
-      }
-      a ~ a {
-        margin-left: 25px;
-      }
-      a:hover {
-        color: $gray-regular;
-        cursor: pointer;
-      }
-    }
     .header__intro {
 
       height: 90%;
