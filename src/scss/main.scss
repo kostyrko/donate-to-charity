@@ -3,8 +3,8 @@
 @import "colors";
 @import "base";
 @import "mixins";
-@import "./home/home";
-@import "./nav/nav";
-@import "./contact_form";
-@import "./logOut";
-@import "./footer";
+@import "./homePage/homePage";
+@import "./userPages/userPages";
+@import "./layouts/navs/nav";
+@import "./layouts/footer";
+@import "./forms/forms";

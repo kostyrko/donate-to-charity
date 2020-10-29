@@ -2,12 +2,12 @@ import React, { useState, useContext } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { compose } from "recompose";
 // import { FirebaseContext } from './Firebase';
-import { withFirebase } from "../components/Firebase";
-import UserContext from "./context";
-import * as ROUTES from "../constants/routers";
-import emailValidation from '../constants/emailValidation'
-import NavLogin from './Nav/NavLogin'
-import NavMain from './Nav/NavMain'
+import { withFirebase } from "../../components/Firebase";
+import UserContext from "../context";
+import * as ROUTES from "../../constants/routers";
+import emailValidation from '../../constants/emailValidation'
+import NavLogin from '../layout/navs/NavLogin'
+import NavMain from '../layout/navs/NavMain'
 
 const INITIAL_STATE = {
   username: "",
@@ -103,7 +103,7 @@ const SignUpFormBase = ({ firebase, history }) => {
 
 const SignUpForm = compose(withRouter, withFirebase)(SignUpFormBase);
 
-const SignUp = () => (
+const SignUpPage = () => (
   <>
     <nav className="nav--centered">
       <div className="container">
@@ -123,6 +123,6 @@ const SignUp = () => (
   </>
 );
 
-export default SignUp;
+export default SignUpPage;
 
 export { SignUpForm };

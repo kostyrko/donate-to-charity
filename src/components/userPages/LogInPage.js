@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import * as ROUTES from "../constants/routers";
+import * as ROUTES from "../../constants/routers";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
-import { withFirebase } from "../components/Firebase";
-import emailValidation from "../constants/emailValidation";
-import NavLogin from "./Nav/NavLogin";
-import NavMain from "./Nav/NavMain";
+import { withFirebase } from "../Firebase";
+import emailValidation from "../../constants/emailValidation";
+import NavLogin from '../layout/navs/NavLogin'
+import NavMain from '../layout/navs/NavMain'
 
 const INITIAL_STATE = {
   email: "",
@@ -72,7 +72,7 @@ const LogInFormBase = (props) => {
 
 const LogInForm = compose(withRouter, withFirebase)(LogInFormBase);
 
-const LogIn = () => (
+const LogInPage = () => (
   <>
     <nav className="nav--centered">
       <div className="container">
@@ -92,4 +92,4 @@ const LogIn = () => (
   </>
 );
 
-export default LogIn;
+export default LogInPage;

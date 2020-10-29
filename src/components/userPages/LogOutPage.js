@@ -1,9 +1,10 @@
 import React from "react";
-import NavLogin from "./Nav/NavLogin";
-import NavMain from "./Nav/NavMain";
 import { NavLink } from "react-router-dom";
+import NavLogin from '../layout/navs/NavLogin'
+import NavMain from '../layout/navs/NavMain'
 
-const Logout = () => {
+
+const LogOutPage = () => {
   return (
     <>
       <nav className="nav--centered">
@@ -28,4 +29,4 @@ const Logout = () => {
   );
 };
 
-export default Logout;
+export default LogOutPage;

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import UserContext from "../context";
-import FirebaseContext from "../Firebase/context";
+import UserContext from "../../context";
+import FirebaseContext from "../../Firebase/context";
 
 const NavLogged = () => {
   const { email } = useContext(UserContext);

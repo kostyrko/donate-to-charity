@@ -34,3 +34,5 @@ class Firebase {
 export default Firebase;
 
 // https://firebase.google.com/docs/functions/config-env
+
+// https://firebase.google.com/docs/auth/web/manage-users

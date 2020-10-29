@@ -1,19 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
 import HomeHeader from "./HomeHeader";
-import NavLogin from "../Nav/NavLogin";
-import NavLogged from "../Nav/NavLogged";
-import NavMain from "../Nav/NavMain";
+import NavLogin from "../layout/navs/NavLogin";
+import NavLogged from "../layout/navs/NavLogged";
+import NavMain from "../layout/navs/NavMain";
 import AboutProject from "./AboutProject";
 import HomeThreeColumns from "./HomeThreeColumns";
 import AboutUs from "./AboutUs";
 import HomeOrganizations from "./HomeOrganizations";
 import HomeContact from "./HomeContact";
-import ContactForm from "../ContactForm";
-import Footer from "../Footer";
+import ContactForm from "../forms/ContactForm";
+import Footer from '../layout/Footer';
 import UserContext from "../context";
 import * as ROUTES from "../../constants/routers";
 
-const Home = () => {
+const HomePage = () => {
   const [link, setLink] = useState(ROUTES.LOG_IN)
   const { email } = useContext(UserContext);
 
@@ -41,4 +41,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
