@@ -1,13 +1,9 @@
 .home__header {
-  // border: 1px solid red;
-  // height: 100vh;
   @include flex-center;
   .container {
-    // border: 1px solid red;
     height: 100vh;
     display: flex;
     max-width: 1600px;
-    margin-top: 50px;
   }
   .header__photo,
   .header__main {
@@ -19,19 +15,15 @@
     background-image: url(../../assets/Home-Hero-Image.jpg);
     background-repeat: no-repeat;
     background-position: 105%;
-    // background-size: 150%;
+
   }
   .header__main {
     width: 50vw;
-
     .home__nav {
-
       height: 10vh;
-
       margin-right: 5vw;
     }
     .header__intro {
-
       height: 90%;
       display: flex;
       flex-direction: column;
@@ -40,7 +32,6 @@
     }
     .header__tag-line {
       color: $gray-dark;
-      // border: 1px solid blue;
       text-align: center;
       font-size: 1.5rem;
       p {
@@ -51,7 +42,6 @@
       height: 25px;
       width: 100%;
       background-repeat: no-repeat;
-      // background-attachment: fixed;
       background-position: center;
       background-image: url(../../assets/Decoration.svg);
       padding: 15px 0 30px 0;

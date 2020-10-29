@@ -43,19 +43,21 @@ const LogInFormBase = (props) => {
   return (
     <form onSubmit={onSubmit}>
       <div className="form-container">
+        <label htmlFor="email">Email</label>
         <input
           name="email"
           value={email}
           onChange={onChange}
           type="text"
-          placeholder="Email Address"
+          
         />
+        <label htmlFor="password">Hasło</label>
         <input
           name="password"
           value={password}
           onChange={onChange}
           type="password"
-          placeholder="Password"
+          
         />
       </div>
       <div className="buttons">

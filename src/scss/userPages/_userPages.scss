@@ -8,20 +8,56 @@
 }
 
 .form {
+  // max-width: 500px;
   text-align: center;
+  h2 {
+    font-size: 2rem;
+  }
   .decoration {
+    margin-top: 25px;
     width: 100%;
     height: 30px;
     background-size: 50%;
   }
   form {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    max-width: 300px;
     .form-container {
       display: flex;
       flex-direction: column;
       background-color: $gray-light;
-      padding: 25px;
+      padding: 25px 50px;
+    }
+    label {
+      align-self: flex-start;
+      padding: 10px 0;
+    }
+    input {
+      background-color: $gray-light;
+      border: none;
+      border-bottom: 1px solid $gray-regular;
+    }
+    input~label {
+      margin-top: 25px;
+    }
+    .buttons {
+      margin-top: 25px;
+      width: 120%;
+      display: flex;
+      justify-content: space-between;
+      a {
+        padding: 10px 15px;
+      }
+      button {
+        background-color: white;
+        color: $gray-dark;
+        padding: 10px 15px;
+        border: 1px solid $gray-regular;
+        cursor: pointer;
+      }
     }
   }
 }

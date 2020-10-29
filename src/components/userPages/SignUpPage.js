@@ -1,16 +1,14 @@
 import React, { useState, useContext } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { compose } from "recompose";
-// import { FirebaseContext } from './Firebase';
 import { withFirebase } from "../../components/Firebase";
-import UserContext from "../context";
 import * as ROUTES from "../../constants/routers";
 import emailValidation from '../../constants/emailValidation'
 import NavLogin from '../layout/navs/NavLogin'
 import NavMain from '../layout/navs/NavMain'
 
+
 const INITIAL_STATE = {
-  username: "",
   email: "",
   passwordOne: "",
   passwordTwo: "",
@@ -19,13 +17,9 @@ const INITIAL_STATE = {
 
 const SignUpFormBase = ({ firebase, history }) => {
   const [content, setContent] = useState({ ...INITIAL_STATE });
-  const { set } = useContext(UserContext);
-
-
 
   const onSubmit = (e) => {
     const { email, passwordOne } = content;
-    set({ email: email });
     firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then((authUser) => {
@@ -55,45 +49,45 @@ const SignUpFormBase = ({ firebase, history }) => {
     passwordOne.length < 6 ||
     passwordOne !== passwordTwo ||
     passwordOne === "" ||
-    !emailValidation.test(email) ||
-    username === "";
+    !emailValidation.test(email)
 
   return (
     <div>
       <form onSubmit={onSubmit}>
         <div className="form-container">
-        <input
-          name="username"
-          value={username}
-          onChange={onChange}
-          type="text"
-          placeholder="Full Name"
-        />
+        <label htmlFor="email">Email</label>
         <input
           name="email"
           value={email}
           onChange={onChange}
           type="text"
-          placeholder="Email Address"
+          
         />
+        <label htmlFor="passwordOne">Hasło</label>
         <input
           name="passwordOne"
           value={passwordOne}
           onChange={onChange}
           type="password"
-          placeholder="Password"
+          
         />
+        <label htmlFor="passwordTwo">Powtórz hasło</label>
         <input
           name="passwordTwo"
           value={passwordTwo}
           onChange={onChange}
           type="password"
-          placeholder="Confirm Password"
+          
         />
         </div>
+        
+        <div className="buttons">
+        <Link to={ROUTES.LOG_IN}>Zaloguj się</Link>
+
         <button disabled={isInvalid} type="submit">
-          Sign Up
+          Załóż konto
         </button>
+      </div>
         {error && <p>{error.message}</p>}
       </form>
 
