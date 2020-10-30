@@ -38,14 +38,12 @@ function App() {
     };
   }, []);
 
-
-
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <UserContext.Provider value={{ email: content.email }}>
         <Switch>
           <Route exact path={ROUTES.LANDING} component={HomePage} />
-          <Route exact path={ROUTES.DONATE} component={DonatePage} />
+          {content.email ? <Route exact path={ROUTES.DONATE} component={DonatePage} /> : null}
           <Route exact path={ROUTES.LOG_IN} component={LogInPage} />
           <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
           <Route exact path={ROUTES.LOG_OUT} component={LogOutPage} />
