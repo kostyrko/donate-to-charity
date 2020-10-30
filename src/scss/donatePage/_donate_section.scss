@@ -1,0 +1,32 @@
+@import "donate_form";
+
+.donate-section {
+  flex-direction: column;
+  .important-info {
+    width: 100%;
+    height: 20vh;
+    // padding-left: 50px;
+    background-color: $yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3, p {
+      padding-left: 50px;
+    }
+    h3 {
+      padding-left: 50px;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+  }
+  .form-display {
+    width: 100%;
+    height: 80vh;
+    min-height: 700px;
+    background-color: $gray-light;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../assets/Background-Form.jpg');
+  }
+}
