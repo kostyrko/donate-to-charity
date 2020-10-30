@@ -38,7 +38,6 @@ const ContactForm = () => {
       })
         .then((response) => {
           if (response.ok) {
-            // console.log("response", response);
             return response.json();
           } else {
             throw new Error("Something went wrong");
@@ -55,9 +54,13 @@ const ContactForm = () => {
 
       setTimeout(function () {
         setIsSubmitted(false);
+        setData({
+          name: "",
+          email: "",
+          message: "",
+        })
       }, 2000);
     } else {
-      // console.log("not valid");
       setIsSubmitted(false);
     }
   };
@@ -121,7 +124,7 @@ const ContactForm = () => {
         name="message"
         id=""
         value={message}
-        placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ullam tempore molestias aspernatur quos blanditiis eos eveniet exercitationem repellendus voluptates."
+        placeholder=" Wiadomość powinna mieść przynajmniej 120 znaków."
         onChange={handleChange}
       />
       <button className="submit-btn" onClick={(e) => handleSubmit(e)}>

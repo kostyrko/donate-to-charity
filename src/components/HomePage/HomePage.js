@@ -7,7 +7,7 @@ import AboutProject from "./AboutProject";
 import HomeThreeColumns from "./HomeThreeColumns";
 import AboutUs from "./AboutUs";
 import HomeOrganizations from "./HomeOrganizations";
-import HomeContact from "./HomeContact";
+import ContactSection from "../forms/ContactSection";
 import ContactForm from "../forms/ContactForm";
 import Footer from '../layout/Footer';
 import UserContext from "../context";
@@ -31,12 +31,14 @@ const HomePage = () => {
           <NavMain />
         </nav>
       </HomeHeader>
-      <AboutProject link={link}>
-        <HomeThreeColumns />
-      </AboutProject>
-      <AboutUs />
-      <HomeOrganizations />
-      <HomeContact contactForm={<ContactForm />} footer={<Footer />} />
+      <main>
+        <AboutProject link={link}>
+          <HomeThreeColumns />
+        </AboutProject>
+        <AboutUs />
+        <HomeOrganizations />
+        <ContactSection contactForm={<ContactForm />} footer={<Footer />} />
+      </main>
     </>
   );
 };

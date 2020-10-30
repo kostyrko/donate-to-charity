@@ -3,10 +3,9 @@ import { Link, withRouter } from "react-router-dom";
 import { compose } from "recompose";
 import { withFirebase } from "../../components/Firebase";
 import * as ROUTES from "../../constants/routers";
-import emailValidation from '../../constants/emailValidation'
-import NavLogin from '../layout/navs/NavLogin'
-import NavMain from '../layout/navs/NavMain'
-
+import emailValidation from "../../constants/emailValidation";
+import NavLogin from "../layout/navs/NavLogin";
+import NavMain from "../layout/navs/NavMain";
 
 const INITIAL_STATE = {
   email: "",
@@ -33,8 +32,6 @@ const SignUpFormBase = ({ firebase, history }) => {
     e.preventDefault();
   };
 
-  
-
   console.log("signUp-> content", content);
 
   const onChange = (e) => {
@@ -43,54 +40,44 @@ const SignUpFormBase = ({ firebase, history }) => {
 
   const { username, email, passwordOne, passwordTwo, error } = content;
 
-  
-
   const isInvalid =
     passwordOne.length < 6 ||
     passwordOne !== passwordTwo ||
     passwordOne === "" ||
-    !emailValidation.test(email)
+    !emailValidation.test(email);
 
   return (
     <div>
       <form onSubmit={onSubmit}>
         <div className="form-container">
-        <label htmlFor="email">Email</label>
-        <input
-          name="email"
-          value={email}
-          onChange={onChange}
-          type="text"
-          
-        />
-        <label htmlFor="passwordOne">Hasło</label>
-        <input
-          name="passwordOne"
-          value={passwordOne}
-          onChange={onChange}
-          type="password"
-          
-        />
-        <label htmlFor="passwordTwo">Powtórz hasło</label>
-        <input
-          name="passwordTwo"
-          value={passwordTwo}
-          onChange={onChange}
-          type="password"
-          
-        />
+          <label htmlFor="email">Email</label>
+          <input name="email" value={email} onChange={onChange} type="text" />
+          <label htmlFor="passwordOne">Hasło</label>
+          <input
+            name="passwordOne"
+            value={passwordOne}
+            onChange={onChange}
+            type="password"
+            placeholder="min. 6 znaków"
+          />
+          <label htmlFor="passwordTwo">Powtórz hasło</label>
+          <input
+            name="passwordTwo"
+            value={passwordTwo}
+            onChange={onChange}
+            type="password"
+          />
         </div>
-        
-        <div className="buttons">
-        <Link to={ROUTES.LOG_IN}>Zaloguj się</Link>
 
-        <button disabled={isInvalid} type="submit">
-          Załóż konto
-        </button>
-      </div>
+        <div className="buttons">
+          <Link to={ROUTES.LOG_IN}>Zaloguj się</Link>
+
+          <button disabled={isInvalid} type="submit">
+            Załóż konto
+          </button>
+        </div>
         {error && <p>{error.message}</p>}
       </form>
-
     </div>
   );
 };
@@ -101,18 +88,18 @@ const SignUpPage = () => (
   <>
     <nav className="nav--centered">
       <div className="container">
-        <NavLogin/>
-        <NavMain/>
+        <NavLogin />
+        <NavMain />
       </div>
     </nav>
     <main className="signUp">
       <div className="container">
-          <div className="signUp__form form">
-            <h2>Załóż konto</h2>
-            <div className="decoration"></div>
-            <SignUpForm />
-          </div>
+        <div className="signUp__form form">
+          <h2>Załóż konto</h2>
+          <div className="decoration"></div>
+          <SignUpForm />
         </div>
+      </div>
     </main>
   </>
 );

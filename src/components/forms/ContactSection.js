@@ -1,9 +1,9 @@
 import React from 'react';
 
-const HomeContact = (props) => {
-  let {footer, contactForm} = props;
+const ContactSection = (props) => {
+  const {footer, contactForm} = props;
   return (
-    <section id="contact" className="home-contact">
+    <section id="contact" className="contact-section">
       <div className="container">
         <div className="image"></div>
         <div className="form-container">
@@ -15,4 +15,4 @@ const HomeContact = (props) => {
   );
 }
 
-export default HomeContact;
+export default ContactSection;
