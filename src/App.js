@@ -19,7 +19,7 @@ function App() {
   const firebase = useContext(FirebaseContext);
 
   useEffect(() => {
-    // console.log('firebase',firebase);
+    
     const unsubscribe = firebase.auth.onAuthStateChanged(function (user) {
       if (user) {
         setContent((prev) => ({
