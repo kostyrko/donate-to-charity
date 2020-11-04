@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/kostyrko/donate-to-charity/static/css/main.4b5c2bed.chunk.css",
-    "main.js": "/kostyrko/donate-to-charity/static/js/main.2d4987a2.chunk.js",
-    "main.js.map": "/kostyrko/donate-to-charity/static/js/main.2d4987a2.chunk.js.map",
-    "runtime-main.js": "/kostyrko/donate-to-charity/static/js/runtime-main.5d93eb6e.js",
-    "runtime-main.js.map": "/kostyrko/donate-to-charity/static/js/runtime-main.5d93eb6e.js.map",
-    "static/js/2.e99e0aca.chunk.js": "/kostyrko/donate-to-charity/static/js/2.e99e0aca.chunk.js",
-    "static/js/2.e99e0aca.chunk.js.map": "/kostyrko/donate-to-charity/static/js/2.e99e0aca.chunk.js.map",
-    "index.html": "/kostyrko/donate-to-charity/index.html",
-    "precache-manifest.4593b3dd04840af4f03a2c88b1466494.js": "/kostyrko/donate-to-charity/precache-manifest.4593b3dd04840af4f03a2c88b1466494.js",
-    "service-worker.js": "/kostyrko/donate-to-charity/service-worker.js",
-    "static/css/main.4b5c2bed.chunk.css.map": "/kostyrko/donate-to-charity/static/css/main.4b5c2bed.chunk.css.map",
-    "static/js/2.e99e0aca.chunk.js.LICENSE.txt": "/kostyrko/donate-to-charity/static/js/2.e99e0aca.chunk.js.LICENSE.txt",
-    "static/media/main.scss": "/kostyrko/donate-to-charity/static/media/Signature.e54cfcfc.svg"
+    "main.css": "/donate-to-charity/static/css/main.1f9466df.chunk.css",
+    "main.js": "/donate-to-charity/static/js/main.c84b70de.chunk.js",
+    "main.js.map": "/donate-to-charity/static/js/main.c84b70de.chunk.js.map",
+    "runtime-main.js": "/donate-to-charity/static/js/runtime-main.3bc24953.js",
+    "runtime-main.js.map": "/donate-to-charity/static/js/runtime-main.3bc24953.js.map",
+    "static/js/2.e99e0aca.chunk.js": "/donate-to-charity/static/js/2.e99e0aca.chunk.js",
+    "static/js/2.e99e0aca.chunk.js.map": "/donate-to-charity/static/js/2.e99e0aca.chunk.js.map",
+    "index.html": "/donate-to-charity/index.html",
+    "precache-manifest.2a10b4f72f34c3b31467ce52c0558c8c.js": "/donate-to-charity/precache-manifest.2a10b4f72f34c3b31467ce52c0558c8c.js",
+    "service-worker.js": "/donate-to-charity/service-worker.js",
+    "static/css/main.1f9466df.chunk.css.map": "/donate-to-charity/static/css/main.1f9466df.chunk.css.map",
+    "static/js/2.e99e0aca.chunk.js.LICENSE.txt": "/donate-to-charity/static/js/2.e99e0aca.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/donate-to-charity/static/media/Signature.e54cfcfc.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5d93eb6e.js",
+    "static/js/runtime-main.3bc24953.js",
     "static/js/2.e99e0aca.chunk.js",
-    "static/css/main.4b5c2bed.chunk.css",
-    "static/js/main.2d4987a2.chunk.js"
+    "static/css/main.1f9466df.chunk.css",
+    "static/js/main.c84b70de.chunk.js"
   ]
 }
