@@ -7,12 +7,18 @@
   .three-columns {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    // background-color: $yellow;
+    justify-content: center;
     background: url('../../assets/3\ Columns\ Background.png');
-    min-height: 250px;
+    min-height: 350px;
     height: 30%;
     width: 100%;
+    ul {
+      width: 100%;
+      max-width: 1400px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
     .accomplishment {
       width: 300px;
       text-align: center;
@@ -39,7 +45,7 @@
     .instructions__header {
       width: 100%;
       // background-color: red;
-      min-height: 180px;
+      min-height: 250px;
       @include flex-center;
       flex-direction: column;
       h3 {
@@ -47,7 +53,7 @@
         padding: 20px;
       }
       .decoration {
-        height: 25px;
+        height: 35px;
         width: 40%;
         background-repeat: no-repeat;
         background-position: center;
@@ -100,7 +106,7 @@
     .instructions__link {
       @include flex-center;
       width: 100%;
-      min-height: 200px;
+      min-height: 250px;
       a {
         color: $gray-dark;
         font-weight: 300;

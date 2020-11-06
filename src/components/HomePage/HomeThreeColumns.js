@@ -2,7 +2,8 @@ import React from 'react';
 
 const HomeThreeColumns = () => {
   return (
-    <ul className="three-columns">
+    <div className="three-columns">
+      <ul>
       <li className="accomplishment">
         <div className="heading">
           <p className="number">10</p>
@@ -30,7 +31,8 @@ const HomeThreeColumns = () => {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor architecto sed laborum inventore, recusandae maiores exercitationem?
         </p>
       </li>
-    </ul>
+      </ul>
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
 .home__header {
   @include flex-center;
   .container {
-    height: 100vh;
+    // height: 100vh;
     display: flex;
   }
   .header__photo,
@@ -10,11 +10,12 @@
     height: 100%
   }
   .header__photo {
+    min-height: 800px;
     width: 50vw;
     background-image: url(../../assets/Home-Hero-Image.jpg);
     background-repeat: no-repeat;
-    background-position: 105%;
-
+    background-position: 105% 90%;
+    background-size: 160%;
   }
   .header__main {
     width: 50vw;

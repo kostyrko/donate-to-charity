@@ -5,7 +5,8 @@
   }
   .information, .image {
     width: 50%;
-    height: 100vh;
+    // height: 100vh;
+    min-height: 800px;
   }
   .information {
     @include flex-center;
