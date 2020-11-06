@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/donate-to-charity/static/css/main.1f9466df.chunk.css",
-    "main.js": "/donate-to-charity/static/js/main.c84b70de.chunk.js",
-    "main.js.map": "/donate-to-charity/static/js/main.c84b70de.chunk.js.map",
+    "main.css": "/donate-to-charity/static/css/main.1eaeb944.chunk.css",
+    "main.js": "/donate-to-charity/static/js/main.d259be8b.chunk.js",
+    "main.js.map": "/donate-to-charity/static/js/main.d259be8b.chunk.js.map",
     "runtime-main.js": "/donate-to-charity/static/js/runtime-main.3bc24953.js",
     "runtime-main.js.map": "/donate-to-charity/static/js/runtime-main.3bc24953.js.map",
     "static/js/2.e99e0aca.chunk.js": "/donate-to-charity/static/js/2.e99e0aca.chunk.js",
     "static/js/2.e99e0aca.chunk.js.map": "/donate-to-charity/static/js/2.e99e0aca.chunk.js.map",
     "index.html": "/donate-to-charity/index.html",
-    "precache-manifest.2a10b4f72f34c3b31467ce52c0558c8c.js": "/donate-to-charity/precache-manifest.2a10b4f72f34c3b31467ce52c0558c8c.js",
+    "precache-manifest.bb57101e9f77f97f452778a89b893bc5.js": "/donate-to-charity/precache-manifest.bb57101e9f77f97f452778a89b893bc5.js",
     "service-worker.js": "/donate-to-charity/service-worker.js",
-    "static/css/main.1f9466df.chunk.css.map": "/donate-to-charity/static/css/main.1f9466df.chunk.css.map",
+    "static/css/main.1eaeb944.chunk.css.map": "/donate-to-charity/static/css/main.1eaeb944.chunk.css.map",
     "static/js/2.e99e0aca.chunk.js.LICENSE.txt": "/donate-to-charity/static/js/2.e99e0aca.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/donate-to-charity/static/media/Signature.e54cfcfc.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.3bc24953.js",
     "static/js/2.e99e0aca.chunk.js",
-    "static/css/main.1f9466df.chunk.css",
-    "static/js/main.c84b70de.chunk.js"
+    "static/css/main.1eaeb944.chunk.css",
+    "static/js/main.d259be8b.chunk.js"
   ]
 }
